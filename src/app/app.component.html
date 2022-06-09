@@ -1,6 +1,9 @@
-<hello name="{{ name }}"></hello>
+<hello name="{{ name }}" (messageString)="receiveMessage($event)"></hello>
 <p>Start editing to see some magic happen :)</p>
 <app-child>
   <p>Yaha aayega ng-content</p>
 </app-child>
+<hello [name]="'Taraj'" (messageString)="receiveMessage($event)"></hello>
+<!-- This is a comment-->
+<!--Taraj is passed as string. To pass Taraj as variable, pass under single quotes-->
 <ng-content></ng-content>

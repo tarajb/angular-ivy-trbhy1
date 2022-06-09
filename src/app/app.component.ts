@@ -7,4 +7,8 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Taraj ' + VERSION.major;
+
+  receiveMessage(event) {
+    alert(event);
+  }
 }
