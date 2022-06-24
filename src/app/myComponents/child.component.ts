@@ -14,4 +14,22 @@ import { Component } from '@angular/core';
 export class ChildComponent {
   name = 'Taraj';
   today = new Date();
+  currentStyle;
+  currentClasses;
+  ngOnInit() {
+    this.setCurrentClass();
+    this.setCurrentStyle();
+  }
+  setCurrentClass() {
+    this.currentClasses = {
+      mastHeading: true,
+      mainHeading: false,
+    };
+  }
+  setCurrentStyle() {
+    this.currentStyle = {
+      fontStyle: 'italic',
+      fontWeight: 'bold',
+    };
+  }
 }
