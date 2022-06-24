@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  template:
-    '<h1 [ngClass]="currentClasses" [ngStyle]="currentStyle"> {{name}}</h1> <ng-content></ng-content> {{today | date}}',
+  template: '<h1> {{name}}</h1> <ng-content></ng-content> {{today | date}}',
   styles: [
     `
   h1: {
@@ -11,25 +10,7 @@ import { Component, OnInit } from '@angular/core';
   }`,
   ],
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent {
   name = 'Taraj';
   today = new Date();
-  currentClasses;
-  currentStyle;
-  ngOnInit() {
-    this.setCurrentClasses();
-    this.setCurrentStyle();
-  }
-  setCurrentClasses() {
-    this.currentClasses = {
-      mastHeading: true,
-      mainTitle: false,
-    };
-  }
-  setCurrentStyle() {
-    this.currentStyle = {
-      fontStyle: 'italic',
-      fontWeight: 'bold',
-    };
-  }
 }
